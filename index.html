@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="An invitation to celebrate Ganesh Chaturthi with the Deshmukh family.">
+  <title>Ganesh Chaturthi | The Deshmukh Family</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Mukta:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-label="Loading invitation">
+    <div class="loader-mark"><span>ॐ</span></div>
+    <p>Preparing a sacred celebration</p>
+  </div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Ganesh Chaturthi home"><span>ॐ</span> Ganesha</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#story">The Occasion</a><a href="#schedule">Schedule</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="hero-pattern"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">॥ श्री गणेशाय नमः ॥</p>
+        <p class="hero-kicker reveal">The Deshmukh Family invites you to</p>
+        <h1 class="reveal">Celebrate the<br><em>Divine Arrival</em></h1>
+        <p class="hero-copy reveal">As the first lamp is lit, may every heart be filled with joy, grace and new beginnings.</p>
+        <a class="button button-primary reveal" href="#rsvp">Join the Celebration <span>↓</span></a>
+      </div>
+      <div class="ganesha-mark" aria-hidden="true"><span>ॐ</span><i></i><i></i><i></i><i></i></div>
+      <a class="scroll-cue" href="#story"><span></span> Discover</a>
+    </section>
+
+    <!-- Story -->
+    <section class="story section-shell" id="story">
+      <div class="section-heading reveal"><p class="eyebrow">A Sacred Invitation</p><h2>Where devotion becomes<br><em>a beautiful memory.</em></h2></div>
+      <div class="story-grid">
+        <div class="story-image reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=1200&q=85" alt="Golden diya lamps glowing in a prayer setting"><div class="image-glow"></div></div>
+        <div class="story-copy reveal"><span class="chapter">01 — The Beginning</span><p>Every year, we open our doors and hearts to welcome Vighnaharta—the remover of obstacles, the keeper of wisdom, and the beloved Bappa.</p><p>This year, we would be honoured to share the fragrance of flowers, the warmth of aarti, and the sweetness of modaks with you.</p><div class="signature">Vakratunda Mahakaya</div></div>
+      </div>
+    </section>
+
+    <!-- Family -->
+    <section class="family section-shell"><div class="family-card reveal"><p class="eyebrow">With Warmth & Devotion</p><h2>Hosted with love by<br><em>The Deshmukh Family</em></h2><p>Aarav & Meera Deshmukh, with their family, request the pleasure of your company.</p><div class="floral-rule"><span>✦</span></div></div></section>
+
+    <!-- Timeline -->
+    <section class="timeline-section section-shell" id="schedule"><div class="section-heading centered reveal"><p class="eyebrow">The Sacred Day</p><h2>Moments to <em>cherish.</em></h2></div><div class="timeline" id="timeline"></div></section>
+
+    <!-- Interactive mandala -->
+    <section class="mandala-section"><div class="mandala-copy reveal"><p class="eyebrow">A Circle of Grace</p><h2>Turn the <em>mandala.</em></h2><p>Move your cursor across this sacred geometry and let the moment breathe.</p></div><div class="mandala-wrap reveal" id="mandala" aria-label="Interactive golden mandala"><div class="mandala-ring ring-1"></div><div class="mandala-ring ring-2"></div><div class="mandala-ring ring-3"></div><div class="mandala-center">ॐ</div></div></section>
+
+    <!-- Details -->
+    <section class="details section-shell"><div class="section-heading centered reveal"><p class="eyebrow">Save The Date</p><h2>One evening. <em>Infinite blessings.</em></h2></div><div class="detail-cards"><article class="detail-card reveal"><span class="detail-icon">◷</span><h3>Date & Time</h3><p id="eventDateText"></p><p>From 6:30 PM onwards</p></article><article class="detail-card reveal"><span class="detail-icon">⌂</span><h3>Celebration</h3><p>Pran Pratishtha, Aarti</p><p>Mahaprasad & Sangeet</p></article><article class="detail-card reveal"><span class="detail-icon">⌖</span><h3>Dress Note</h3><p>Festive Indian Elegance</p><p>Touches of gold are welcome</p></article></div></section>
+
+    <!-- Gallery -->
+    <section class="gallery-section section-shell"><div class="section-heading reveal"><p class="eyebrow">Scenes of Devotion</p><h2>In every detail,<br><em>a little wonder.</em></h2></div><div class="gallery-grid" id="gallery"></div></section>
+
+    <!-- Video -->
+    <section class="video-section"><div class="video-frame reveal"><iframe id="celebrationVideo" title="Ganesh Chaturthi celebration film" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="video-overlay"><span>Our Celebration Film</span></div></div></section>
+
+    <!-- Countdown -->
+    <section class="countdown-section section-shell"><div class="countdown-inner reveal"><p class="eyebrow">Until We Gather</p><h2>The lamps are <em>waiting.</em></h2><div class="countdown" id="countdown" aria-label="Countdown to the celebration"><div><strong id="days">00</strong><span>Days</span></div><div><strong id="hours">00</strong><span>Hours</span></div><div><strong id="minutes">00</strong><span>Minutes</span></div><div><strong id="seconds">00</strong><span>Seconds</span></div></div></div></section>
+
+    <!-- Blessings -->
+    <section class="blessings"><div class="blessing-symbol">ॐ</div><blockquote class="reveal">“May Lord Ganesha bring light to your path and abundance to every new beginning.”</blockquote><p class="reveal">— With blessings from our home to yours —</p></section>
+
+    <!-- Venue and map -->
+    <section class="venue section-shell" id="venue"><div class="venue-content reveal"><p class="eyebrow">The Gathering Place</p><h2>Come home to<br><em>The Royal Courtyard.</em></h2><p id="venueAddress"></p><a id="directionsLink" class="text-link" target="_blank" rel="noreferrer">Get Directions <span>↗</span></a></div><div class="map-wrap reveal"><iframe id="venueMap" title="Venue location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></section>
+
+    <!-- RSVP -->
+    <section class="rsvp section-shell" id="rsvp"><div class="rsvp-card reveal"><div class="rsvp-heading"><p class="eyebrow">Your Presence Is A Blessing</p><h2>Will you <em>join us?</em></h2><p>Please share your response by 5 September 2026.</p></div><form id="rsvpForm"><div class="form-row"><label>Full Name<input required name="name" autocomplete="name" placeholder="Your full name"></label><label>Phone Number<input required name="phone" type="tel" autocomplete="tel" placeholder="Your phone number"></label></div><label>Will you be attending?<select required name="attendance"><option value="">Choose your response</option><option>Joyfully attending</option><option>Attending with family</option><option>Sending blessings from afar</option></select></label><label>A note for the family <textarea name="message" rows="3" placeholder="Share your wishes"></textarea></label><button class="button button-primary" type="submit">Send My Response <span>→</span></button><p class="form-status" id="formStatus" role="status"></p></form></div></section>
+
+    <!-- Aarti -->
+    <section class="aarti"><p class="eyebrow reveal">A Prayer For The Evening</p><h2 class="reveal">Ganpati Bappa <em>Morya</em></h2><p class="aarti-script reveal">सर्व मंगल मांगल्ये शिवे सर्वार्थ साधिके।<br>शरण्ये त्र्यम्बके गौरी नारायणि नमोऽस्तुते॥</p></section>
+
+    <!-- Final blessing -->
+    <section class="final-blessing section-shell"><div class="final-mark reveal">ॐ</div><p class="eyebrow reveal">See You Under The Lamps</p><h2 class="reveal">Come celebrate<br><em>new beginnings.</em></h2><a class="button button-outline reveal" href="#home">Back to the blessing ↑</a></section>
+  </main>
+
+  <!-- Footer -->
+  <footer><span>© 2026 The Deshmukh Family</span><span>Made with devotion · Ganpati Bappa Morya</span></footer>
+  <script src="config.js"></script><script src="script.js"></script>
+</body>
+</html>
